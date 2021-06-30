@@ -9,17 +9,25 @@
 
 //crear imagen para que docker
 
-docker build . --tag debian:myenginx
+docker build . --tag debian:mynginx
 
 //crear imagen para que docker y que no utilice cache docker  
 
-docker build . --tag debian:myenginx --no-cache
+docker build . --tag debian:mynginx --no-cache
 
 
 //contenedor temporal con terminal
 
-docker run --rm  --name ejemplo -ti debian:myenginx bash
+docker run --rm  --name ejemplo -ti debian:mynginx bash
 
 //podemos verificar la version en la terminal de nginx, es la misma que mostro cuando construimos nuestro Dockerfile
-
 nginx -v
+
+//para darle un puerto ejecutamos 
+docker run --rm  --name ejemplo -p 8080:80 -ti debian:mynginx bash
+
+//en la terminal podemos poner
+nginx
+
+//nos vamos en el navegador
+localhost:8080
