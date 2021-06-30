@@ -20,17 +20,13 @@ docker build . -t debian:mynginx
 docker build . --tag debian:mynginx --no-cache
 
 
-//contenedor temporal con terminal
+//contenedor temporal con terminal y llamada interactiva ,ademas asignamos un puerto para que corra el servidor 
 
-docker run --rm  --name ejemplo -ti debian:mynginx bash
+docker run --rm  --name ejemplo -p 8080:80 -ti debian:mynginx bash
 
 //podemos verificar la version en la terminal de nginx, es la misma que mostro cuando construimos nuestro Dockerfile
 
 nginx -v
-
-//para darle un puerto ejecutamos 
-
-docker run --rm  --name ejemplo -p 8080:80 -ti debian:mynginx bash
 
 //en la terminal podemos poner
 
