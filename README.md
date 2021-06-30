@@ -1,11 +1,11 @@
-#TPI135
+# TPI135
 # Practica4-Parte1
-Alumno: William Giovanni Cheverría Pacheco
+# Alumno: William Giovanni Cheverría Pacheco
 
 
 
 
-#INSTRUCCIONES PARA EL DOCKERFILE 
+# INSTRUCCIONES PARA EL DOCKERFILE 
 
 //crear imagen para que docker
 docker build . --tag debian:myenginx
